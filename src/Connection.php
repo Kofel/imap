@@ -34,6 +34,16 @@ class Connection
     }
 
     /**
+     * Get server connection string
+     *
+     * @return string
+     */
+    public function getServer()
+    {
+        return $this->server;
+    }
+
+    /**
      * Get a list of mailboxes (also known as folders)
      *
      * @return Mailbox[]

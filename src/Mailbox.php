@@ -122,12 +122,13 @@ class Mailbox implements \IteratorAggregate
      * Add a message to the mailbox
      *
      * @param string $message
+     * @param string $options
      *
      * @return boolean
      */
-    public function addMessage($message)
+    public function addMessage($message, $options = null)
     {
-        return imap_append($this->connection->getResource(), $this->mailbox, $message);
+        return imap_append($this->connection->getResource(), $this->mailbox, $message, $options);
     }
 
     /**
